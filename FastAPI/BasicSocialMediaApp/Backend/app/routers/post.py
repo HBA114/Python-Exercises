@@ -7,7 +7,7 @@ router = APIRouter()
 
 
 
-@router.post("users/{user_id}/posts/",
+@router.post("/users/{user_id}/posts/",
           tags=["posts"],
           response_model=_schemas.Post)
 def create_post(user_id: int,
