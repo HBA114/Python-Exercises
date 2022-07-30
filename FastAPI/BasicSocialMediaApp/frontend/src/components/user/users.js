@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import data from "../../myData.json"
 
-const userRequestAddress = data["user"]
+const userRequestAddress = data["get_users"]
 
 export default function Users() {
     const [users, setUsers] = useState([])

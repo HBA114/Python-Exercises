@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react"
+import data from '../../myData.json';
+
+const getPostsRequestAddress = data["get_posts"];
 
 export default function Post() {
     const [posts, setPosts] = useState([])
@@ -6,7 +9,7 @@ export default function Post() {
     useEffect(() => {
         const fetchPosts = async () => {
             const response = await fetch(
-                "http://localhost:8000/posts/",
+                getPostsRequestAddress,
                 {
                     headers: { 'Content-Type': 'application/json' }
                 }

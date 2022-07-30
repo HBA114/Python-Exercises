@@ -3,7 +3,9 @@ import './App.css';
 import Post from './components/post/post';
 import CreateUser from './components/user/create_user';
 import Users from './components/user/users';
+import data from './myData.json';
 
+const userRequestAddress = data["get_users"];
 
 function App() {
 
@@ -12,7 +14,7 @@ function App() {
   useEffect(()=>{
     const fetchUsers = async () =>{
       const response = await fetch(
-        "http://localhost:8000/users/",
+        userRequestAddress,
         {
           headers: {'Content-Type': 'application/json'}
         }
