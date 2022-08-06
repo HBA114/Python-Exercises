@@ -1,6 +1,6 @@
 from os import path
 from sqlalchemy.orm import Session
-import services.database as _database, services.models as _models, services.schemas as _schemas
+import app.services.database as _database, app.services.models as _models, app.services.schemas as _schemas
 
 
 def create_database():
